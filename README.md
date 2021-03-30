@@ -5,13 +5,11 @@ TL;DR:
 Install (Artillery)[https://artillery.io/]
 
 ```sh
+# Install artillery
 yarn global add artillery
-cd perf-testing
-# Start the Agoric platform
-agoric install && agoric start --reset
 ```
 
-Install the testing dapp and stary ag-solo
+Install the testing dapp and start ag-solo
 
 ```sh
 cd perf-testing
@@ -29,7 +27,7 @@ agoric deploy api/deploy.js
 In a third terminal run the tests,
 
 ```sh
-# Navigate to the `ui` directory and start a local server
+# Navigate to the `ui` directory and run the artillery test
 cd ui
 # runs the tests and saves the data in report.json
 artillery run tests/zoe.yaml --output zoe-result.json
