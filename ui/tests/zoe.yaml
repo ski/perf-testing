@@ -1,0 +1,14 @@
+config:
+  target: 'ws://localhost:8000/api/performance'
+  phases:
+    - duration: 60
+      arrivalRate: 1
+      name: 'Zoe contracts'
+  ws:
+    # Set a custom subprotocol:
+scenarios:
+  - name: 'Every 2 Minutes for 10 mins'
+    engine: 'ws'
+    flow:
+      - send: '{"type": "test/install","data": {"depositFacetId": "604346717"}}'
+      - think: 4
