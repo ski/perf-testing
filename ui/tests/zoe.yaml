@@ -7,7 +7,7 @@ config:
   ws:
     # Set a custom subprotocol:
 scenarios:
-  - name: 'Every 2 Minutes for 10 mins'
+  - name: 'Install Contract'
     engine: 'ws'
     flow:
       - send: '{"type": "test/install","data": {"depositFacetId": "604346717"}}'
